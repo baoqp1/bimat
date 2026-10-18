@@ -1,375 +1,661 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
 
-<title>20.10 — A little something for you</title>
+    <title>20.10 — A little something for you</title>
 
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Be+Vietnam+Pro:wght@300;400;500&display=swap">
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Be+Vietnam+Pro:wght@300;400;500&display=swap"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-<canvas id="bg"></canvas>
-
-<svg width="0" height="0" style="position:absolute">
-    <symbol id="rose" viewBox="0 0 100 100">
-        <g>
-            <path d="M50 92V58"/>
-            <path d="M50 78c-12-2-18-10-19-18 11 1 17 8 19 18"/>
-            <path d="M50 72c11-2 17-8 19-16-10 0-17 6-19 16"/>
-            <path d="M50 56c-16 0-24-12-20-24 4-8 12-12 20-10 8-2 16 2 20 10 4 12-4 24-20 24z"/>
-            <path d="M50 52c-8-2-12-8-10-14 2-5 8-7 10-4 2-3 8-1 10 4 2 6-2 12-10 14z"/>
-            <path d="M45 40c3-3 7-3 10 0"/>
-        </g>
-    </symbol>
-</svg>
-
-<button class="btn back" id="back">← Back</button>
+    <!-- BACKGROUND -->
+    <canvas id="bg"></canvas>
 
 
-<!-- OPENING -->
+    <!-- ROSE SYMBOL -->
+    <svg
+        width="0"
+        height="0"
+        style="position:absolute"
+    >
+        <symbol id="rose" viewBox="0 0 100 100">
 
-<section class="scene on" id="s-open">
+            <g>
+                <path d="M50 92V58"/>
 
-    <div class="big">20.10</div>
+                <path
+                    d="M50 78c-12-2-18-10-19-18 11 1 17 8 19 18"
+                />
 
-    <div class="sub">
-        A little something for you.
-    </div>
+                <path
+                    d="M50 72c11-2 17-8 19-16-10 0-17 6-19 16"
+                />
 
-    <button class="btn" id="openbtn">
-        OPEN →
+                <path
+                    d="M50 56c-16 0-24-12-20-24 4-8 12-12 20-10 8-2 16 2 20 10 4 12-4 24-20 24z"
+                />
+
+                <path
+                    d="M50 52c-8-2-12-8-10-14 2-5 8-7 10-4 2-3 8-1 10 4 2 6-2 12-10 14z"
+                />
+
+                <path d="M45 40c3-3 7-3 10 0"/>
+            </g>
+
+        </symbol>
+    </svg>
+
+
+    <!-- BACK BUTTON -->
+    <button
+        class="btn back"
+        id="back"
+    >
+        ← Back
     </button>
 
-</section>
+
+    <!-- =====================================================
+         OPENING
+    ====================================================== -->
+
+    <section
+        class="scene on"
+        id="s-open"
+    >
+
+        <div class="big">
+            20.10
+        </div>
+
+        <div class="sub">
+            A little something for you.
+        </div>
+
+        <button
+            class="btn"
+            id="openbtn"
+        >
+            OPEN →
+        </button>
+
+    </section>
 
 
-<!-- INTRO -->
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
 
-<section class="scene" id="s-intro">
+    <section
+        class="scene"
+        id="s-intro"
+    >
 
-    <div class="av xl" id="introav"></div>
+        <div
+            class="av xl"
+            id="introav"
+        ></div>
 
-    <div class="seq" id="introseq"></div>
+        <div
+            class="seq"
+            id="introseq"
+        ></div>
 
-</section>
+    </section>
 
 
-<!-- MENU -->
+    <!-- =====================================================
+         MENU
+    ====================================================== -->
 
-<section class="scene" id="s-menu">
+    <section
+        class="scene"
+        id="s-menu"
+    >
 
-    <div class="av s in"></div>
+        <div class="av s in"></div>
 
-    <div class="big menu-date">
-        20.10
-    </div>
+        <div class="big menu-date">
+            20.10
+        </div>
 
-    <div class="sub">
-        A little something for you.
-    </div>
+        <div class="sub">
+            A little something for you.
+        </div>
 
-    <div class="menu">
 
-        <div class="card" data-go="smile">
-            <b>🌸</b>
+        <div class="menu">
+
+            <div
+                class="card"
+                data-go="smile"
+            >
+                <b>🌸</b>
+                01 — SMILE
+            </div>
+
+
+            <div
+                class="card"
+                data-go="music"
+            >
+                <b>♪</b>
+                02 — MUSIC
+            </div>
+
+
+            <div
+                class="card"
+                data-go="happy"
+            >
+                <b>✦</b>
+                03 — HAPPINESS
+            </div>
+
+
+            <div
+                class="card"
+                data-go="foryou"
+            >
+                <b>♡</b>
+                04 — FOR YOU
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         01 — SMILE
+    ====================================================== -->
+
+    <section
+        class="scene"
+        id="s-smile"
+    >
+
+        <div class="ttl">
             01 — SMILE
         </div>
 
-        <div class="card" data-go="music">
-            <b>♪</b>
+
+        <div class="av xl"></div>
+
+
+        <div
+            class="seq"
+            id="smileseq"
+        ></div>
+
+
+        <!-- GAME -->
+
+        <div
+            class="smile-game"
+            id="smilegame"
+        >
+
+            <div class="game-top">
+
+                <span>
+                    CATCH THE SMILES
+                </span>
+
+                <strong id="smilescore">
+                    0 / 8
+                </strong>
+
+            </div>
+
+
+            <div
+                class="gamearea"
+                id="gamearea"
+            ></div>
+
+        </div>
+
+
+        <!-- GAME END -->
+
+        <div
+            class="seq"
+            id="smileend"
+        ></div>
+
+
+        <button
+            class="btn chapter-continue"
+            id="smilecontinue"
+        >
+            CONTINUE →
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — MUSIC
+    ====================================================== -->
+
+    <section
+        class="scene"
+        id="s-music"
+    >
+
+        <div class="ttl">
             02 — MUSIC
         </div>
 
-        <div class="card" data-go="happy">
-            <b>✦</b>
+
+        <div
+            class="seq"
+            id="musicseq"
+        ></div>
+
+
+        <!-- MUSIC PLAYER -->
+
+        <div
+            class="player"
+            id="player"
+        >
+
+            <div
+                class="ring"
+                id="ring"
+            >
+
+                <div
+                    class="av xl in"
+                    style="opacity:1"
+                ></div>
+
+            </div>
+
+
+            <div
+                class="tname"
+                id="tname"
+            ></div>
+
+
+            <div
+                class="wave"
+                id="wave"
+            ></div>
+
+
+            <input
+                type="range"
+                id="seek"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+            >
+
+
+            <div class="tm">
+
+                <span id="tcur">
+                    0:00
+                </span>
+
+                <span id="tdur">
+                    0:00
+                </span>
+
+            </div>
+
+
+            <div class="ctl">
+
+                <button id="prev">
+                    ⏮
+                </button>
+
+
+                <button
+                    class="main"
+                    id="pp"
+                >
+                    ▶
+                </button>
+
+
+                <button id="next">
+                    ⏭
+                </button>
+
+
+                <span>
+                    🔊
+                </span>
+
+
+                <input
+                    class="vol"
+                    type="range"
+                    id="vol"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="0.8"
+                >
+
+            </div>
+
+
+            <div
+                class="pl"
+                id="pl"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="seq"
+            id="musicend"
+        ></div>
+
+
+        <button
+            class="btn chapter-continue"
+            id="musiccontinue"
+        >
+            CONTINUE →
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — HAPPINESS
+    ====================================================== -->
+
+    <section
+        class="scene"
+        id="s-happy"
+    >
+
+        <div class="ttl">
             03 — HAPPINESS
         </div>
 
-        <div class="card" data-go="foryou">
-            <b>♡</b>
+
+        <div
+            class="seq"
+            id="happyseq"
+        ></div>
+
+
+        <div
+            class="fl3"
+            id="fl3"
+        ></div>
+
+
+        <div
+            class="seq"
+            id="happy2"
+        ></div>
+
+
+        <button
+            class="btn chapter-continue"
+            id="happycontinue"
+        >
+            CONTINUE →
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — FOR YOU
+    ====================================================== -->
+
+    <section
+        class="scene"
+        id="s-foryou"
+    >
+
+        <div class="ttl">
             04 — FOR YOU
         </div>
 
-    </div>
 
-</section>
-
-
-<!-- 01 SMILE -->
-
-<section class="scene" id="s-smile">
-
-    <div class="ttl">
-        01 — SMILE
-    </div>
-
-    <div class="av xl"></div>
-
-    <div class="seq" id="smileseq"></div>
+        <div
+            class="av xl"
+            style="
+                box-shadow:
+                0 0 60px
+                rgba(255,126,182,.5);
+            "
+        ></div>
 
 
-    <!-- GAME -->
+        <div
+            class="seq"
+            id="foryouseq"
+        ></div>
 
-    <div class="smile-game" id="smilegame">
 
-        <div class="game-top">
+        <!-- WISH BOX -->
 
-            <span>
-                CATCH THE SMILES
-            </span>
+        <div
+            class="foryoubox"
+            id="foryoubox"
+        >
 
-            <strong id="smilescore">
-                0 / 8
-            </strong>
+            <div class="foryou-hint">
+                Có một điều cuối cùng tôi muốn dành cho bà.
+            </div>
+
+
+            <button
+                class="btn for-you-btn"
+                id="foryouopen"
+            >
+                NHẤN VÀO ĐÂY 🌸
+            </button>
 
         </div>
 
-        <div class="gamearea" id="gamearea"></div>
 
-    </div>
+        <!-- CONTINUE -->
 
+        <button
+            class="btn chapter-continue"
+            id="foryoucontinue"
+        >
+            CONTINUE →
+        </button>
 
-    <!-- GAME END -->
-
-    <div class="seq" id="smileend"></div>
-
-    <button
-        class="btn chapter-continue"
-        id="smilecontinue">
-
-        CONTINUE →
-
-    </button>
-
-</section>
+    </section>
 
 
-<!-- 02 MUSIC -->
+    <!-- =====================================================
+         FINAL MESSAGE
+    ====================================================== -->
 
-<section class="scene" id="s-music">
+    <section
+        class="scene"
+        id="s-final"
+    >
 
-    <div class="ttl">
-        02 — MUSIC
-    </div>
-
-    <div class="seq" id="musicseq"></div>
+        <div class="av xl"></div>
 
 
-    <div class="player" id="player">
+        <div
+            class="seq"
+            id="finalseq"
+        ></div>
 
-        <div class="ring" id="ring">
+    </section>
 
-            <div class="av xl in"
-                 style="opacity:1">
+
+    <!-- =====================================================
+         END / CREDITS
+    ====================================================== -->
+
+    <section
+        class="scene"
+        id="s-end"
+    >
+
+        <!-- ROSES -->
+
+        <svg
+            class="corner rose"
+            style="top:5%;left:5%"
+        >
+            <use href="#rose"></use>
+        </svg>
+
+
+        <svg
+            class="corner rose"
+            style="top:5%;right:5%"
+        >
+            <use href="#rose"></use>
+        </svg>
+
+
+        <svg
+            class="corner rose"
+            style="bottom:5%;left:5%"
+        >
+            <use href="#rose"></use>
+        </svg>
+
+
+        <svg
+            class="corner rose"
+            style="bottom:5%;right:5%"
+        >
+            <use href="#rose"></use>
+        </svg>
+
+
+        <!-- END AVATAR -->
+
+        <div
+            class="av in"
+            style="opacity:1"
+        ></div>
+
+
+        <!-- END TEXT -->
+
+        <div
+            class="end-credit"
+        >
+
+            <div class="end-small">
+                A LITTLE SOMETHING
+            </div>
+
+
+            <div class="end-title">
+                FOR YOU.
+            </div>
+
+
+            <div class="end-line"></div>
+
+
+            <div class="end-info">
+
+                <div>
+                    <span>
+                        DESIGNED & CODED BY
+                    </span>
+
+                    <strong>
+                        Bảo
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        FOR
+                    </span>
+
+                    <strong>
+                        Someone special ♡
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        DATE
+                    </span>
+
+                    <strong>
+                        20.10.2026
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="end-note">
+
+                Made with too much code<br>
+
+                & a little bit of courage.
+
+            </div>
+
+
+            <div class="end-sign">
+                — Bảo
             </div>
 
         </div>
 
 
-        <div class="tname" id="tname"></div>
-
-
-        <div class="wave" id="wave"></div>
-
-
-        <input
-            type="range"
-            id="seek"
-            min="0"
-            max="100"
-            value="0"
-            step="0.1">
-
-
-        <div class="tm">
-
-            <span id="tcur">
-                0:00
-            </span>
-
-            <span id="tdur">
-                0:00
-            </span>
-
-        </div>
-
-
-        <div class="ctl">
-
-            <button id="prev">
-                ⏮
-            </button>
-
-            <button
-                class="main"
-                id="pp">
-                ▶
-            </button>
-
-            <button id="next">
-                ⏭
-            </button>
-
-            <span>
-                🔊
-            </span>
-
-            <input
-                class="vol"
-                type="range"
-                id="vol"
-                min="0"
-                max="1"
-                step="0.05"
-                value="0.8">
-
-        </div>
-
-
-        <div class="pl" id="pl"></div>
-
-    </div>
-
-
-    <div class="seq" id="musicend"></div>
-
-
-    <button
-        class="btn chapter-continue"
-        id="musiccontinue">
-
-        CONTINUE →
-
-    </button>
-
-</section>
-
-
-<!-- 03 HAPPINESS -->
-
-<section class="scene" id="s-happy">
-
-    <div class="ttl">
-        03 — HAPPINESS
-    </div>
-
-    <div class="seq" id="happyseq"></div>
-
-    <div class="fl3" id="fl3"></div>
-
-    <div class="seq" id="happy2"></div>
-
-    <button
-        class="btn chapter-continue"
-        id="happycontinue">
-
-        CONTINUE →
-
-    </button>
-
-</section>
-
-<!-- 04 FOR YOU -->
-
-<section class="scene" id="s-foryou">
-
-    <div class="ttl">
-        04 — FOR YOU
-    </div>
-
-    <div
-        class="av xl"
-        style="box-shadow:0 0 60px rgba(255,126,182,.5)">
-    </div>
-
-    <div class="seq" id="foryouseq"></div>
-
-    <!-- Ô LỜI CHÚC -->
-
-    <div class="foryoubox" id="foryoubox">
+        <!-- REPLAY -->
 
         <button
             class="btn"
-            id="foryouopen">
-            NHẤN VÀO ĐÂY 🌸
+            id="replay"
+            style="
+                opacity:0;
+                transition:opacity 1.5s;
+            "
+        >
+            Replay ↻
         </button>
 
-    </div>
-
-    <button
-        class="btn chapter-continue"
-        id="foryoucontinue">
-
-        CONTINUE →
-
-    </button>
-
-</section>
-
-<!-- FINAL -->
-
-<section class="scene" id="s-final">
-
-    <div class="av xl"></div>
-
-    <div class="seq" id="finalseq"></div>
-
-</section>
+    </section>
 
 
-<!-- END -->
+    <!-- SCRIPT -->
 
-<section class="scene" id="s-end">
-
-    <svg
-        class="corner rose"
-        style="top:5%;left:5%">
-        <use href="#rose"></use>
-    </svg>
-
-    <svg
-        class="corner rose"
-        style="top:5%;right:5%">
-        <use href="#rose"></use>
-    </svg>
-
-    <svg
-        class="corner rose"
-        style="bottom:5%;left:5%">
-        <use href="#rose"></use>
-    </svg>
-
-    <svg
-        class="corner rose"
-        style="bottom:5%;right:5%">
-        <use href="#rose"></use>
-    </svg>
-
-
-    <div class="av in"
-         style="opacity:1">
-    </div>
-
-    <div class="seq" id="endseq"></div>
-
-    <button
-        class="btn"
-        id="replay"
-        style="opacity:0;transition:opacity 1.5s">
-
-        Replay ↻
-
-    </button>
-
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
+```
