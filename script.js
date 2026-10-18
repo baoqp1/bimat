@@ -1465,11 +1465,13 @@ $('happycontinue').onclick = () => {
 
 };
 
+```js
 /* =========================================================
    04 — FOR YOU
 ========================================================= */
 
 let foryouOpened = false;
+
 
 async function foryou() {
 
@@ -1484,6 +1486,8 @@ async function foryou() {
     $('foryoubox').style.display = 'block';
 
     $('foryouopen').style.display = 'inline-block';
+
+    $('foryoubox').classList.remove('opened');
 
     await sleep(800);
 
@@ -1508,9 +1512,154 @@ async function foryou() {
         ],
         my
     )) return;
-
 }
 
+
+/* =========================
+   OPEN WISH
+========================= */
+
+$('foryouopen').onclick = async () => {
+
+    if (foryouOpened) return;
+
+    foryouOpened = true;
+
+    const my = run;
+
+    $('foryouopen').style.display = 'none';
+
+    $('foryoubox').classList.add('opened');
+
+    await sleep(500);
+
+    if (my !== run) return;
+
+    await seq(
+        $('foryouseq'),
+        [
+            [
+                'Chúc bà một ngày 20/10 thật vui.',
+                1800,
+                'hl'
+            ],
+
+            [
+                'Mong bà luôn được yêu thương,',
+                1500
+            ],
+
+            [
+                'được trân trọng,',
+                1300
+            ],
+
+            [
+                'và luôn có những người thật lòng ở bên.',
+                1800
+            ],
+
+            [
+                'Mong những điều bà mong muốn',
+                1400
+            ],
+
+            [
+                'rồi sẽ có ngày trở thành hiện thực.',
+                1800,
+                'hl'
+            ],
+
+            [
+                'Và quan trọng nhất...',
+                1500
+            ],
+
+            [
+                'mong bà luôn có thật nhiều lý do để cười. 🌸',
+                2200,
+                'hl'
+            ]
+        ],
+        my
+    );
+
+    if (my !== run) return;
+
+    $('foryoucontinue').style.display = 'block';
+};
+
+
+/* =========================
+   FOR YOU → FINAL
+========================= */
+
+$('foryoucontinue').onclick = async () => {
+
+    const my = run;
+
+    $('foryoucontinue').style.display = 'none';
+
+    go('final');
+
+    await sleep(900);
+
+    if (!await seq(
+        $('finalseq'),
+        [
+            [
+                'Happy 20/10, bà nhé.',
+                2000,
+                'hl'
+            ],
+
+            [
+                'Mong bà luôn vui.',
+                1400
+            ],
+
+            [
+                'Mong bà luôn có lý do để cười.',
+                1500
+            ],
+
+            [
+                'Và mong những ngày bình thường của bà',
+                1300
+            ],
+
+            [
+                'cũng có thật nhiều điều đáng nhớ.',
+                1800
+            ],
+
+            [
+                'Còn nếu một ngày bà cần người hát cùng...',
+                1800
+            ],
+
+            [
+                'tôi vẫn ở đây. 🎤😉',
+                2200,
+                'hl'
+            ]
+        ],
+        my
+    )) return;
+
+    await sleep(1000);
+
+    if (my !== run) return;
+
+    go('end');
+
+    $('s-end').classList.add('fin');
+
+    await sleep(1800);
+
+    $('replay').style.opacity = '1';
+};
+```
 
 /* =========================
    OPEN WISH
